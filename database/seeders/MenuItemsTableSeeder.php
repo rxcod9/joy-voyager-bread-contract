@@ -17,7 +17,7 @@ class MenuItemsTableSeeder extends Seeder
     {
         $menu = Menu::where('name', 'admin')->firstOrFail();
 
-        $maxOrder = MenuItem::max('order');
+        $maxOrder = MenuItem::max('order') ?? 1;
     
         $menuItem = MenuItem::firstOrNew([
             'menu_id' => $menu->id,
