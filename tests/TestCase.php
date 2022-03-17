@@ -1,9 +1,9 @@
 <?php
 
-namespace Joy\VoyagerBreadReplaceKeyword\Tests;
+namespace Joy\VoyagerBreadContract\Tests;
 
 use Dotenv\Dotenv;
-use Joy\VoyagerBreadReplaceKeyword\VoyagerBreadReplaceKeywordServiceProvider;
+use Joy\VoyagerBreadContract\VoyagerBreadContractServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 abstract class TestCase extends Orchestra
@@ -36,7 +36,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         $serviceProviders = [
-            VoyagerBreadReplaceKeywordServiceProvider::class,
+            VoyagerBreadContractServiceProvider::class,
         ];
 
         return $serviceProviders;
