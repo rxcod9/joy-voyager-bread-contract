@@ -13,7 +13,7 @@ class MenuItemsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run($parentMenuId = null)
     {
         $menu = Menu::where('name', 'admin')->firstOrFail();
 
@@ -30,7 +30,7 @@ class MenuItemsTableSeeder extends Seeder
                 'target'     => '_self',
                 'icon_class' => 'voyager-bread voyager-bread-contract',
                 'color'      => null,
-                'parent_id'  => null,
+                'parent_id'  => $parentMenuId,
                 'order'      => $maxOrder++,
             ])->save();
         }
