@@ -10,7 +10,7 @@ return [
         'assigned_to' => 'Assigned to',
         'parent'      => 'Parent',
         'created_at'  => 'Created at',
-        'updated_at'  => 'Updated at',
+        'deleted_at'  => 'Deleted at',
     ],
     'data_types' => [
         'contract' => [
