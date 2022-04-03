@@ -31,7 +31,7 @@ class MenuItemsTableSeeder extends Seeder
                 'icon_class' => 'voyager-bread voyager-bread-contract',
                 'color'      => null,
                 'parent_id'  => $parentMenuId,
-                'order'      => $maxOrder++,
+                'order'      => ++$maxOrder,
             ])->save();
         }
     }
